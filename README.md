@@ -1,6 +1,6 @@
 You can run this tests using any IDE
 
-Or if you have installed Maven you can run tests using it
+Or if you have installed Maven you can run tests in terminal
 
 To run all API tests run in terminal
 ```mvn '-Dtest=api.*Test' test```
