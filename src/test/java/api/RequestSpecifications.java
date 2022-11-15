@@ -10,7 +10,7 @@ public class RequestSpecifications {
     RequestSpecification getRequestSpecification() {
         return RestAssured.given()
                 .log()
-                .ifValidationFails()
+                .all()
                 .contentType(ContentType.XML)
                 .auth()
                 .basic(Constants.LOGIN, Constants.PASSWORD);
