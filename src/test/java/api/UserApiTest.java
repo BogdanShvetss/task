@@ -54,7 +54,7 @@ public class UserApiTest {
                 .extract()
                 .statusCode();
 
-        Assert.assertEquals(statusCode, 200,
+        Assert.assertEquals(statusCode, 201,
                 String.format("Unexpected status code in response after log in - (%s)", statusCode));
     }
 }
