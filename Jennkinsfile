@@ -1,14 +1,10 @@
 node {
-    parameters {
-    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
-  }
-
     stage('Say Hi') {
         echo 'hi!'
     }
 
     stage('Checkout') {
-        git branch: '${BRANCH}', credentialsId: '08f6c9f0-1cde-49ff-8399-29008afb64d2', url: 'https://github.com/BogdanShvetss/ci'
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '08f6c9f0-1cde-49ff-8399-29008afb64d2', url: 'https://github.com/BogdanShvetss/ci/']]])
     }
 
     stage('running tests') {
