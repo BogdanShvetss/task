@@ -1,16 +1,32 @@
-You can run this tests using any IDE
+Test cases for the site - https://dailytodo.org/. It's the simple site for creating todo lists, below you can see 3 test cases that cover main functionality of the site.
 
-Or if you have installed Maven you can run tests in terminal
+1)Check that user can create a new task
+| Test Steps to Follow  | Expected result |
+| ------------- | ------------- |
+| Open the site https://dailytodo.org  | The main page of the site has been opened and it looks according to the design:![](https://github.com/BogdanShvetss/task/blob/master/src/test/resources/home_page.png)|
+| Click on the "Create your Daily Todo list" button  | Screen with expty textarea has been opened and looks according to the design:  |
+| Input some text in the text area and click on the "Save tasks" button | Your task has been saved and it's displayed on the page:  |
+| Check that name of the task is the same as you've typed in the previous step | Task on the page has the same text as you've typed  |
 
-To run all API tests run in terminal
-```mvn '-Dtest=api.*Test' test```
 
-For UI test use
-```mvn '-Dtest=ui.tests.*Test' test```
+2)Check that user can edit an existing task
+| Test Steps to Follow  | Expected result |
+| ------------- | ------------- |
+| Open the site https://dailytodo.org  | The main page of the site has been opened and it looks according to the design: |
+| Click on the "Create your Daily Todo list" button  | Screen with expty textarea has been opened and looks according to the design:  |
+| Input some text in the text area and click on the "Save tasks" button | Your task has been saved and it's displayed on the page:  |
+| Click on the "Edit" link | Screen with textarea has been opened  |
+| Change name of a task to new and click on the "Save tasks" button| Your task has been changed and it's displayed on the page:  |
 
-After running tests, you can check report
-If you have installed Allure, run
-```allure serve``` in terminal
-
-Example of report:
-![report](https://user-images.githubusercontent.com/35080265/197028483-9b6a83a6-9233-4cc7-bcc5-dc6378e8a6ce.png)
+3)Check that user can see a history of tasks completion
+| Test Steps to Follow  | Expected result |
+| ------------- | ------------- |
+| Open the site https://dailytodo.org  | The main page of the site has been opened and it looks according to the design: |
+| Click on the "Create your Daily Todo list" button  | Screen with expty textarea has been opened and looks according to the design:  |
+| Input some text in the text area and click on the "Save tasks" button | Your task has been saved and it's displayed on the page:  |
+| Click on the checkbox in "Today" column to mark your task as finished | Checkbox has a green color |
+| Click on the "»" button in "Older" column| New page has been opened and it look according to the design:  |
+| Find today date in table with dates (the last block) and chech it's color|block of today's date in history has a green color |
+| Return to the previous page and click on the checkbox in "Today" column to mark your task as unfinished | Checkbox doesn't have any color |
+| Click on the "»" button in "Older" column| New page has been opened and it look according to the design:  |
+| Find today date in table with dates (the last block) and chech it's color|block of today's date in history has a red color |
