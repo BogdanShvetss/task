@@ -1,6 +1,8 @@
 package ui.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import testData.Constants;
 import ui.driver.DriverFactory;
@@ -17,14 +19,14 @@ public class TestSetup {
     TodoListPage todoListPage = new TodoListPage();
     TasksHistory tasksHistory = new TasksHistory();
 
-    @BeforeTest
+    @BeforeMethod
     public void beforeTest() {
         customWebDriver.initDriver(DriverFactory.Browser.CHROME);
         DriverFactory.getDriver().navigate().to(Constants.BASE_URL);
     }
 
-    @AfterTest
-    public void AfterTest() {
+    @AfterMethod
+    public void AfterTestMethod() {
         if (DriverFactory.getDriver() != null) {
             DriverFactory.getDriver().quit();
         }
