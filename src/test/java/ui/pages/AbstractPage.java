@@ -5,11 +5,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ui.driver.DriverFactory;
 
+import java.time.Duration;
+
 public abstract class AbstractPage {
 
     protected boolean isElementDisplayed(By locator) {
         try {
-            WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getDriver(), 5);
+            WebDriverWait webDriverWait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(5));
             webDriverWait.until(ExpectedConditions.visibilityOf(DriverFactory.getDriver().findElement(locator)));
             return true;
         } catch (Exception e) {
