@@ -26,4 +26,12 @@ public abstract class AbstractPage {
     protected void clickOnElement(By element) {
         DriverFactory.getDriver().findElement(element).click();
     }
+
+    protected void clearTextField(By element) {
+        DriverFactory.getDriver().findElement(element).clear();
+    }
+
+    protected String getCssValueFromElement(By element, String cssValue) {
+       return DriverFactory.getDriver().findElement(element).getCssValue(cssValue);
+    }
 }
