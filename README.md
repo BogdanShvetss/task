@@ -14,7 +14,9 @@ If you have installed Allure, run
 Example of report:
 ![example_of_report](https://github.com/BogdanShvetss/task/assets/35080265/66952a18-8e1a-4ea8-865d-1b586bc9a0e9)
 
-TEST CASES
+
+
+**TEST CASES**
 
 1)Check that user can create a new task
 | Test Steps to Follow  | Expected result |
