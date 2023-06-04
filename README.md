@@ -1,4 +1,20 @@
-Test cases for the site - https://dailytodo.org/. It's the simple site for creating todo lists, below you can see 3 test cases that cover main functionality of the site.
+Test cases for the site - https://dailytodo.org/. It's the simple site for creating todo lists, below you can see 3 test cases that cover main functionality of the site all of them are automated.
+
+You can run this tests using any IDE
+
+Or if you have installed Maven you can run tests in terminal
+
+To run all tests run in terminal
+```mvn '-Dtest=ui.tests.BasicTest' test```
+
+After running tests, you can check report
+If you have installed Allure, run
+```allure serve``` in terminal
+
+Example of report:
+![example_of_report](https://github.com/BogdanShvetss/task/assets/35080265/66952a18-8e1a-4ea8-865d-1b586bc9a0e9)
+
+TEST CASES
 
 1)Check that user can create a new task
 | Test Steps to Follow  | Expected result |
